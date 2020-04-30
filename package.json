@@ -13,7 +13,9 @@
   "scripts": {
     "lint": "eslint .",
     "test": "mocha",
-    "posttest": "npm run lint"
+    "posttest": "npm run lint",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "engines": {
     "node": ">=4"
@@ -26,7 +28,8 @@
     "mpns": "^2.1.0",
     "node-cache": "^3.2.1",
     "node-gcm": "^0.14.4",
-    "strong-globalize": "^2.6.2"
+    "strong-globalize": "^2.6.2",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "chai": "^2.3.0",
@@ -43,5 +46,6 @@
     "type": "git",
     "url": "https://github.com/strongloop/loopback-component-push.git"
   },
-  "license": "Artistic-2.0"
+  "license": "Artistic-2.0",
+  "snyk": true
 }
